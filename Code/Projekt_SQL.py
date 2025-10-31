@@ -1,0 +1,1 @@
+# Beforehand I cleaned the Data in Excel, I used a cleaned up and anonymized data set
