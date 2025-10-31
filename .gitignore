@@ -22,5 +22,5 @@
 *.vscode/
 *.idea/
 
-# Original Excel files (to keep them anonymous)
+# Excel files (to keep them anonymous)
 *Fragebogen_Pre.xlsx
