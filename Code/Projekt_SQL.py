@@ -41,18 +41,18 @@ class SQLLearnproject:
           Loads Excel data and creates a SQL table.
         
         Parameter:
-        excel_datei (str): Path to the Excel file
+        excel_file (str): Path to the Excel file
         tabellen_name (str): Name of the SQL table to be created
         """
-        print(f"Load Excel-file: {table_name}")
+        print(f"Load Excel-file: {excel_file}")
         
         # Read Excel-file with pandas
-        df = pd.read_excel(Fragenbogen_A)
+        df = pd.read_excel(excel_file)
         
         # Save data in SQL-Table
         df.to_sql(table_name, self.conn, if_exists='replace', index=False)
         
-        print(f"   Table '{SQL_learning-table}' created")
+        print(f"   Table '{SQL_learning_table}' created")
         print(f"   Number rows: {len(df)}")
         print(f"   Columns: {', '.join(df.columns)}")
         
