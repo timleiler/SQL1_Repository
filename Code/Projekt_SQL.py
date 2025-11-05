@@ -100,4 +100,75 @@ class SQLLearnproject:
         
     #     print(" Example data created: 20 Employees in the table 'employee_data'")
     #     return df
+    #
     
+# Basic SQL Operations
+    
+    
+    def select_all_data(self, table='Fragebogen_A'):
+        """
+        SELECT - All data is read
+        Basic SQL Operation.
+        """
+        print(f"\nSELECT: All data from '{table}'")
+        
+        query = f"SELECT * FROM {table}"
+        df = pd.read_sql_query(query, self.conn)
+        
+        print(f"\n{df.to_string()}\n")
+        return df
+    
+    def select_special_columns(self, columns, table='Fragebogen_A'):
+        """
+        SELECT special columns
+        
+        """
+        print(f"\n SELECT: Only Colums {columns}")
+        
+        columns_str = ', '.join(columns)
+        query = f"SELECT {columns_str} FROM {columns}"
+        df = pd.read_sql_query(query, self.conn)
+        
+        print(f"\n{df.to_string()}\n")
+        return df
+    
+    def select_where(self, condition, table='Fragebogen_A'):
+        """
+        SELECT Where - filter data.
+        To select only specific rows from a table.
+        """
+        print(f"\nSELECT with WHERE: {condition}")
+    
+        query = f"SELECT * FROM {table} WHERE {condition}"
+        df = pd.read_sql_query(query, self.conn)
+    
+        print(f"Rows found: {len(df)}")
+        print(f"\n{df.to_string()}\n")
+        return df
+
+    
+    def select_with_order_by(self, column, direction='ASC', table='Fragebogen_A'):
+        """
+        ORDER BY - Sort data.
+        ASC = ascending (small to large), DESC = descending (large to small).
+        """
+        print(f"\nSELECT with ORDER BY: {column} {direction}")
+    
+        query = f"SELECT * FROM {table} ORDER BY {column} {direction}"
+        df = pd.read_sql_query(query, self.conn)
+    
+        print(f"\n{df.head(10).to_string()}\n")
+        return df
+
+
+def select_with_limit(self, amount, table='Fragebogen_A'):
+        """
+        LIMIT - Retrieve only a specific number of rows.
+        """
+        print(f"\nSELECT with LIMIT: First {amount} rows")
+    
+        query = f"SELECT * FROM {table} LIMIT {amount}"
+        df = pd.read_sql_query(query, self.conn)
+    
+        print(f"\n{df.to_string()}\n")
+        return df
