@@ -52,7 +52,7 @@ class SQLLearnproject:
         # Save data in SQL-Table
         df.to_sql(table_name, self.conn, if_exists='replace', index=False)
         
-        print(f"   Table '{SQL_learning_table}' created")
+        print(f"   Table '{table_name}' created")
         print(f"   Number rows: {len(df)}")
         print(f"   Columns: {', '.join(df.columns)}")
         
