@@ -23,7 +23,7 @@ class SQLLearnproject:
     
     """
     
-    def __init__(self, db_name='learnproject.db'):
+    def __init__(self, db_name='learningproject.db'):
         """
         Initializes the database connection.
         
@@ -47,7 +47,15 @@ class SQLLearnproject:
         print(f"Load Excel-file: {excel_file}")
         
         # Read Excel-file with pandas
-        df = pd.read_excel(excel_file)
+        
+        try:
+            if not os.path.exists(excel_file):
+                raise FileNotFoundError(f"Excel-Datei nicht gefunden: {excel_file}")
+            df = pd.read_excel(excel_file)
+        
+        except Exception as e:
+        
+            raise
         
         # Save data in SQL-Table
         df.to_sql(table_name, self.conn, if_exists='replace', index=False)
@@ -126,7 +134,7 @@ class SQLLearnproject:
         print(f"\n SELECT: Only Colums {columns}")
         
         columns_str = ', '.join(columns)
-        query = f"SELECT {columns_str} FROM {columns}"
+        query = f"SELECT {columns_str} FROM {table}"
         df = pd.read_sql_query(query, self.conn)
         
         print(f"\n{df.to_string()}\n")
@@ -139,7 +147,7 @@ class SQLLearnproject:
         """
         print(f"\nSELECT with WHERE: {condition}")
     
-        query = f"SELECT * FROM {table} WHERE {condition}"
+        query = "SELECT * FROM ? WHERE ?"
         df = pd.read_sql_query(query, self.conn)
     
         print(f"Rows found: {len(df)}")
@@ -161,7 +169,7 @@ class SQLLearnproject:
         return df
 
 
-def select_with_limit(self, amount, table='Fragebogen_A'):
+    def select_with_limit(self, amount, table='Fragebogen_A'):
         """
         LIMIT - Retrieve only a specific number of rows.
         """
