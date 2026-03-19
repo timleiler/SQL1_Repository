@@ -7,6 +7,7 @@ This is what the Excel file looks like:
 | Table | Meaning | Explaining |
 | :--- | :--- | :--- |
 | GL | General Ledger | Core transaction data |
+| COA | Chart of Accounts | Maps account codes to categories |
 | Calendar | Date dimension | Enables time-series analysis |
 | Territory | Geographic/Sales regions | Enables segmented P&L by region |
 | Cashflow | Cash flow statement | Complements P&L with liquidity view |
