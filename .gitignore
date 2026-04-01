@@ -24,3 +24,6 @@
 
 # Excel files (to keep them anonymous)
 *.xlsx
+
+# Dataframes
+.db
