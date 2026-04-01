@@ -23,7 +23,7 @@ This is what the Excel file looks like:
 All 6 Excel sheets were loaded into a local SQLite database using pandas and sqlite3. Database indexes were created on all JOIN keys to ensure query performance.
 <br>
 **2. Exploratory Data Analysis**
-Each table was profiled for structure, data quality (nulls, duplicates), and referential integrity. All 3 JOIN relationships were verified — GL → COA, GL → Calendar, GL → Territory - with zero unmatched rows across all joins.
+Each table was profiled for structure, data quality (nulls, duplicates), and referential integrity. All 3 JOIN relationships were verified: GL → COA, GL → Calendar, GL → Territory - with zero unmatched rows across all joins.
 <br>
 **3. P&L Modelling**
 The P&L was constructed by joining the GL to the COA hierarchy (Report → Class → SubClass → Account) and aggregating by year.
