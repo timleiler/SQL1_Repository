@@ -14,9 +14,9 @@ This is what the Excel file looks like:
 | SoCE_St | Statement of Changes in Equity | Equity movements |
 
 
-**Time period**: 2018–2020 (3 full fiscal years)
-**Regions**: North America, Europe, Oceania
-**Countries**: USA, Canada, UK, Germany, France, Australia, New Zealand 
+**Time period**: 2018–2020 (3 full fiscal years) <br>
+**Regions**: North America, Europe, Oceania <br>
+**Countries**: USA, Canada, UK, Germany, France, Australia, New Zealand <br>
 
 ## Methodology
 **1. Data Ingestion**
@@ -76,6 +76,7 @@ Four interactive Plotly charts were produced:
 <img width="1306" height="459" alt="grafik" src="https://github.com/user-attachments/assets/787e5283-4ae8-4af3-bf89-e0e8082eac8f" />
 <br>
 <br>
+
 See more of the Visualization Code [here](https://github.com/timleiler/SQL1_Repository/blob/main/Code/Visualization.ipynb).
 
 
