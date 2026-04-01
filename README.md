@@ -19,16 +19,16 @@ This is what the Excel file looks like:
 **Countries**: USA, Canada, UK, Germany, France, Australia, New Zealand <br>
 
 ## Methodology
-**1. Data Ingestion**
+**1. Data Ingestion**<br>
 All 6 Excel sheets were loaded into a local SQLite database using pandas and sqlite3. Database indexes were created on all JOIN keys to ensure query performance.
 <br>
-**2. Exploratory Data Analysis**
+**2. Exploratory Data Analysis**<br>
 Each table was profiled for structure, data quality (nulls, duplicates), and referential integrity. All 3 JOIN relationships were verified: GL → COA, GL → Calendar, GL → Territory - with zero unmatched rows across all joins.
 <br>
-**3. P&L Modelling**
+**3. P&L Modelling**<br>
 The P&L was constructed by joining the GL to the COA hierarchy (Report → Class → SubClass → Account) and aggregating by year.
 <br>
-**4. Visualization**
+**4. Visualization**<br>
 Four interactive Plotly charts were produced:
 
 - Waterfall chart - full P&L build for 2020
