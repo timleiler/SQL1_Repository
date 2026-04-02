@@ -13,9 +13,9 @@
 *yarn-debug.log*
 *yarn-error.log*
 # System files
-.DS_Store
+*.DS_Store
 # Python (Temporary files only)
-'__pycache__/
+*'__pycache__/
 *.pyc
 
 # IDEs (Contains user-specific data, can lead to problems in project work)
@@ -26,4 +26,4 @@
 *.xlsx
 
 # Dataframes
-.db
+*.db
